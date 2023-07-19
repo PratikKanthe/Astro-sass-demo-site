@@ -1,0 +1,12 @@
+
+
+.featured-forum{
+    background-color: var(--clr-surface);
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+        gap: 0.5rem;
+        padding-top: 1rem;
+    }
+}

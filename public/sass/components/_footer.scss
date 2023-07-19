@@ -1,0 +1,43 @@
+
+
+.footer{
+    background-color: var( --clr-primary-2);
+    padding: 1rem;
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        color: var(--clr-white);
+        gap: 1rem
+    }
+    p{
+        color: var(--clr-on-secondary);
+    }
+    a{
+        color: var(--clr-on-primary);
+        font-size: .875rem;
+        &:hover{
+            color: var(--clr-secondary);
+        }
+    }
+
+    .flex-flow{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper{
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    &__disclaimer{
+        margin-top: 1rem;
+        font-size: .75rem;
+        color: var(--clr-neutral-10);
+    }
+    .ft-icon{
+        aspect-ratio: 1/2;
+        object-fit: contain;
+    }
+}
+
