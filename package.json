@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.8.4"
+    "astro": "^2.8.4",
+    "sass": "^1.63.6"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
