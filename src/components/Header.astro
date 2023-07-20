@@ -6,11 +6,30 @@
 <header>
 	<div class="container">
 		<div class="top__bar">
-			<div class="top__bar__menu-icon">
+			<div class="top__bar__menu-icon ">
 				<img src="images/bars-solid.svg" alt="">
 			</div>
 			<div class="top__bar__img-logo">
-				<img src="/images/logo-small.png" alt="">
+				<img src="/images/logo.png" alt="">
+			</div>
+			<div class="top-content" id="top-hide">
+				<form class="top-bar-search__form" action="/search.html" method="get">
+					<select name="st" class="top-bar-search__item top-bar-search__type" id="js-search-type">
+					  <option>All</option>
+					  <option value="Topics">Topics</option>
+					  <option value="Articles">Articles</option>
+					  <option value="Movies">Movies</option>
+					  <option value="Shows">Shows</option>
+					  <option value="Celebrities">People</option>
+					  <option value="Videos">Videos</option>
+					  <option value="Galleries">Galleries</option>
+					  <option value="Channels">Channels</option>
+					  <option value="FanFictions">Fan Fictions</option>
+					  <option value="Members">Members</option>
+					</select>
+					<input type="text" name="q" class="top-bar-search__item top-bar-search__query" id="js-search-query" placeholder="Search...">
+					<input type="submit" class="top-bar-search__item top-bar-search__submit" value="GO">
+				  </form>
 			</div>
 			<div class="wrap-top-icon">
 
@@ -21,7 +40,8 @@
 						width="30px"
 						alt=""
 						srcset=""
-						class="top-icon"
+						class="top-icons search"
+						id="search"
 					/>
 
 				<div class="top-icons">
@@ -61,8 +81,48 @@
 			</div>
 		</div>
 	</div>
-	<nav>
-		
-	</nav>
+	<nav class="nav">
+		<ul class="nav-items">
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer">Home</a>
+			</li>
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer">TV</a>
+			</li>
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer">MOVIES</a>
+			</li>
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer">DIGITAL</a
+				>
+			</li>
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer"
+					>CELEBRITIES</a
+				>
+			</li>
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer">VIDEOS</a>
+			</li>
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer">GALLERY</a
+				>
+			</li>
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer">FORUM</a>
+			</li>
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer">STORIES</a
+				>
+			</li>
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer">QUIZ</a>
+			</li>
+			<li>
+				<a href="#" target="_blank" rel="noopener noreferrer">HELP</a>
+			</li>
+		</ul>
+</nav>
 </header>
+
 

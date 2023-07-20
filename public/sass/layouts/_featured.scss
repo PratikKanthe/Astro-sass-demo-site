@@ -1,23 +1,41 @@
+
 .featured{
 
+        @media only screen and (min-width: 576px) {
+        padding: 1rem;
+        }
     .article-list{
         display: grid;
-        
         gap: 1rem;
         
-        @media (min-width:902px){
+        @media only screen and (min-width:992px){
             display: grid;
             grid-template-columns: repeat(4,1fr);
             gap: 1rem;
             .article-item:nth-child(1){
                 grid-row: span 2;
                 grid-column: span 2;
+            }
+            .featured .article-item img {
                 height: 100%;
-                width: 50%;
+                aspect-ratio: 16/9;
+            }
+            .article-item img {
+                object-fit: cover;
+                width: 100%;
+            }
+           
+            
+        }
+        @media only screen and (min-width: 576px){
+            .article-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(224px,1fr));
+                gap: 1rem;
             }
         }
         @media (min-width: 302px){
-            grid-template-columns: 1fr;
+            // grid-template-columns: 1fr;
         }
         .article-item:nth-child(1) img{
             object-fit: cover;
@@ -35,6 +53,19 @@
             }
         }
     }
+    
+    
+
+}
+
+@media (min-width:992px){
+    .featured .article-item__content {
+        // position: absolute;
+        // bottom: 0;
+        padding: 2rem 1rem 0.5rem;
+        background-image: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.8));
+    }
+    
     .flex-articles{
         @media (max-width: 578px){
             display: flex;
@@ -47,5 +78,41 @@
             white-space: initial;
         }
     }
-    
+
+    .featured .article-item__time {
+        display: none;
+    }
+    .featured .article-item__title {
+        color: #fff;
+    }
+    .article-item__title {
+        font-size: var(--font-size-sm);
+        font-weight: 600;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    @supports (-webkit-line-clamp: 3){
+    .article-item__title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }}
+}
+
+@media (min-width: 758px){
+    .featured .article-item__title {
+        color: #fff;
+    }
+}
+
+@media (max-width: 578px){
+    .flex-cols{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+    }
 }

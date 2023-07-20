@@ -1,6 +1,7 @@
 
 
 .footer{
+    
     background-color: var( --clr-primary-2);
     padding: 1rem;
     .container{
@@ -8,7 +9,9 @@
         grid-template-columns: 1fr;
         color: var(--clr-white);
         gap: 1rem
+        
     }
+    
     p{
         color: var(--clr-on-secondary);
     }
@@ -38,6 +41,13 @@
     .ft-icon{
         aspect-ratio: 1/2;
         object-fit: contain;
+    }
+    @media (min-width: 992px){
+        .container{
+            display: flex;
+            flex-direction: row;
+            gap: 7rem;
+        }
     }
 }
 

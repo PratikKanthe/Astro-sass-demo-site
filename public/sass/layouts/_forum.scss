@@ -1,6 +1,8 @@
 .quick-jump{
     background-color: var(--clr-surface);
-    
+    .spacing{
+        padding: 2rem;
+    }
     &__form{
         display: flex;
         flex-direction: column;
@@ -8,6 +10,12 @@
         select{
             font-size: 1.125rem;
             padding: 0.5rem;
+        }
+        @media (min-width: 992px) {
+            flex-direction: row;
+            select{
+                width: 40%;
+            }
         }
     }
 }

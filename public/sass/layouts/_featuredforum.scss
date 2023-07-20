@@ -2,8 +2,9 @@
 
 .featured-forum{
     background-color: var(--clr-surface);
-
+    margin-bottom: 2rem;
     &__list {
+        margin-bottom: 2rem;
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
         gap: 0.5rem;

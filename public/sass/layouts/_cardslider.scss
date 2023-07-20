@@ -5,9 +5,9 @@
 	margin-top: 1rem;
 }
 
-.cards::-webkit-scrollbar{
-	width: 0;
-}
+// .cards::-webkit-scrollbar{
+// 	width: 0;
+// }
 
 .scroll--cards{
 	min-width: 60vw;
@@ -17,6 +17,7 @@
     margin-right: 20px;
     border: 1px  black;
 	background-color: #fff;
+    
 }
 
 .show-list{
@@ -42,11 +43,21 @@
     margin-top: 1rem;
     background-color: var(--clr-secondary);
     color: var(--clr-on-secondary);
-    padding: 0.3rem;
-    width: 50%;
+    padding: 0.5rem 1.5rem;
     text-align: center;
     border: 0;
     border-radius: 1rem;
     font-size: .875rem;
-    line-height: 2.5;
+    // line-height: 2.5;
+    &:hover{
+        background-color: var(--clr-primary-2);
+        color: var(--clr-secondary);
+    }
+}
+
+
+@media (min-width: 992px){
+    .scroll--cards{
+        min-width: 20vw;
+    }
 }
