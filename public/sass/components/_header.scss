@@ -2,9 +2,43 @@
 .bg{
     background:url(/public/images/topbar-background.jpg) no-repeat;
     header{
-        .wrap-top-icon{
-            // margin-left: 10%;
+
+        @media (min-width: 992px) {
+            .hamburger{
+                display: none;
+            }
         }
+    
+        @media (min-width: 768px){
+            .hamburger{
+                cursor: pointer;
+            }
+        }
+        .bar{
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: var(--clr-body);
+        }
+
+        @media (max-width:768px) {
+            .hamburger{
+                display: block;
+            }
+            // .hamburger.active .bar:nth-child(2){
+            //     opacity: 0;
+            // }
+            // .hamburger.active .bar:nth-child(1){
+            //     transform: translate(8px) rotate(180deg);
+            // }
+            // .hamburger.active .bar:nth-child(3){
+            //     transform: translate(-8px) rotate(-180deg);
+            // }
+        }
+        
         .search{
             margin-right: 1rem;
         }
@@ -25,7 +59,7 @@
         }
     
         .top-content{
-            margin-left: 12%;
+            // margin-left: 12%;
             .top-bar-search__form {
                 flex: 1;
                 display: flex;
@@ -33,6 +67,17 @@
                 justify-content: center;
                 gap: 0.5rem;
                 margin: 0 0.5rem;
+                @media (max-width: 768px){
+                    #js-search-type{
+                        display: none;
+                    }
+                    #js-search-query{
+                        display: none;
+                    }
+                    #hide-btn{
+                        display: none;
+                    }
+                }
             }
             .top-bar-search__item {
                 height: 32px;
@@ -72,9 +117,9 @@
                 height: 28px;
                 fill: #b57788;
             }
-            // .wrap-top-icon{
-            //     margin-right: 15%;
-            // }
+            .wrap-top-icon{
+                margin-right: 2rem;
+            }
             // .top__bar__menu-icon{
             //     width: 65px;
             //     height: auto;
@@ -112,16 +157,14 @@
             .search{
                 margin-right: 3rem;
             }
-            .wrap-top-icon{
-                // margin-left: 60%;
-            }
+            
             .top-icon{ 
                     width: 50px;
                     height: 50px;
                     padding: 0.5rem;
             }
             #search{
-                visibility: hidden;
+                display: none;
             }
             
         }
@@ -129,73 +172,5 @@
     }
     
     
-    .nav{
-        background-color: #3a0a31;
-        position: relative;
-        display: block;
-        height: 6.5vh;
-    }
-    
-    .nav-items{
-        display: flex;
-        flex-direction: row;
-        text-transform: uppercase;
-        justify-content: space-around;
-    }
-    
-    ul{
-        list-style: none;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        padding-inline-start: 40px;
-    }
-    
-    .nav-items>li:first-child{
-        border-left: 1px solid #661256;
-        margin-left: 10rem;
-    }
-    
-    .nav-items>li:last-child{
-        border-left: 1px solid #661256;
-        margin-right: 10rem;
-    }
-    
-    .nav-items>li:hover{
-        background-color: #e6073d;
-    }
-    
-    @media only screen and (min-width: 768px)
-    {
-        .nav-items>li:first-child {
-            border-left: 1px solid #661256;
-        }
-    }
-    @media only screen and (min-width: 768px)
-    {
-        .nav-items>li {
-            border-right: 1px solid #661256;
-            flex: 1;
-            text-align: center;
-            position: relative;
-        }
-    }
-    
-    .nav-items>li>a{
-        text-decoration: none;
-        color: #fff;
-        display: block;
-        font-size: .75rem;
-        line-height: 1;
-        padding: 1rem;
-    }    
-}
-
-@media (min-width:302px){
-    .nav{
-        display: none;
-        background-color: green;
-    }
 }
 

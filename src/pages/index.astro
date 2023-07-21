@@ -10,6 +10,7 @@ import Forum from '../layouts/Forum.astro'
 import Table from '../layouts/Tables.astro'
 import CardSlider from '../layouts/CardSlider.astro'
 import FeaturedForum from '../layouts/FeaturedForum.astro'
+import Navbar from '../components/Navbar.astro';
 ---
 
 <!DOCTYPE html>
@@ -19,6 +20,7 @@ import FeaturedForum from '../layouts/FeaturedForum.astro'
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
+		<Navbar />
 		<main>
 			<Featured />
 			<AddBaner />
@@ -30,5 +32,6 @@ import FeaturedForum from '../layouts/FeaturedForum.astro'
 			<FeaturedForum />
 		</main>
 		<Footer />
+		<script src="../../public/js/index.js"></script>
 	</body>
 </html>
