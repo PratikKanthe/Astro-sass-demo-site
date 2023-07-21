@@ -55,6 +55,12 @@
     
         
             @media only screen and (min-width: 359.98px){
+                // #top-hide{
+                //     display: none;
+                // }
+                // #js-search-type{
+                //     display: none;
+                // }
                 .top__bar__img-logo {
                     width: 320px;
                     height: auto;
@@ -87,9 +93,10 @@
         }  
         
     }
+
+    
     
     @media only screen and (min-width: 992px) {
-    
         header{
             .top__bar__menu-icon{
                 visibility: hidden;
@@ -118,6 +125,7 @@
             }
             
         }
+        
     }
     
     
@@ -182,5 +190,12 @@
         line-height: 1;
         padding: 1rem;
     }    
+}
+
+@media (min-width:302px){
+    .nav{
+        display: none;
+        background-color: green;
+    }
 }
 

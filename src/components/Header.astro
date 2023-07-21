@@ -1,19 +1,30 @@
-
-	---
-
+---
 
 ---
 <div class="bg">
 <header>
 	<div class="container">
 		<div class="top__bar">
-			<div class="top__bar__menu-icon ">
-				<img src="images/bars-solid.svg" alt="">
+
+		  <input id="menu-toggle" type="checkbox" />
+			<label class='menu-button-container' for="menu-toggle">
+			<div class='menu-button'>
+				<div class="top__bar__menu-icon ">
+					<img src="images/bars-solid.svg" alt="">
+				</div>
 			</div>
+		</label>
+			<ul class="menu">
+				<li>One</li>
+				<li>Two</li>
+				<li>Three</li>
+				<li>Four</li>
+				<li>Five</li>
+			</ul>
 			<div class="top__bar__img-logo">
 				<img src="/images/logo.png" alt="">
 			</div>
-			<div class="top-content" id="top-hide">
+			<!-- <div class="top-content" id="top-hide">
 				<form class="top-bar-search__form" action="/search.html" method="get">
 					<select name="st" class="top-bar-search__item top-bar-search__type" id="js-search-type">
 					  <option>All</option>
@@ -31,7 +42,7 @@
 					<input type="text" name="q" class="top-bar-search__item top-bar-search__query" id="js-search-query" placeholder="Search...">
 					<input type="submit" class="top-bar-search__item top-bar-search__submit" value="GO">
 				  </form>
-			</div>
+			</div> -->
 			<div class="wrap-top-icon">
 
 				<div class="top-icons">
@@ -83,7 +94,6 @@
 		</div>
 	</div>
 </header>
-
 <nav class="nav">
 	<ul class="nav-items">
 		<li>
