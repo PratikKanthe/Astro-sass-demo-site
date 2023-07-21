@@ -12,9 +12,12 @@
         flex-direction: row;
         // align-items: center;
         justify-content: space-between;
-        gap: 1rem;
+        // gap: 1rem;
         padding: 1rem;
-        
+        li:hover{
+            background-color: var(--clr-secondary);
+            color: #fff;
+        }
         li:first-child {
             border-left: 1px solid #661256;
         }
@@ -23,6 +26,7 @@
             flex: 1;
             text-align: center;
             position: relative;
+            color: #fff;
         }
         li>a{
             text-transform: uppercase;
@@ -43,7 +47,7 @@
         .nav__items{
             position: fixed;
             right: 100%;
-            top: 60px;
+            top: 50px;
             gap: 0;
             flex-direction: column;
             background-color: var(--clr-body);
