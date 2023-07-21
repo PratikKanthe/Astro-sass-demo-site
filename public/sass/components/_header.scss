@@ -28,15 +28,6 @@
             .hamburger{
                 display: block;
             }
-            // .hamburger.active .bar:nth-child(2){
-            //     opacity: 0;
-            // }
-            // .hamburger.active .bar:nth-child(1){
-            //     transform: translate(8px) rotate(180deg);
-            // }
-            // .hamburger.active .bar:nth-child(3){
-            //     transform: translate(-8px) rotate(-180deg);
-            // }
         }
         
         .search{
@@ -59,7 +50,6 @@
         }
     
         .top-content{
-            // margin-left: 12%;
             .top-bar-search__form {
                 flex: 1;
                 display: flex;
@@ -100,12 +90,6 @@
     
         
             @media only screen and (min-width: 359.98px){
-                // #top-hide{
-                //     display: none;
-                // }
-                // #js-search-type{
-                //     display: none;
-                // }
                 .top__bar__img-logo {
                     width: 320px;
                     height: auto;
@@ -120,20 +104,6 @@
             .wrap-top-icon{
                 margin-right: 2rem;
             }
-            // .top__bar__menu-icon{
-            //     width: 65px;
-            //     height: auto;
-            // }
-            // .search{
-            //     margin-right: 3rem;
-            //     width: 25px;
-            // }
-            // .top-icon{
-            //     width: 25px;
-            // }
-            // .profile{
-            //     width: 250px;
-            // }
             
         }  
         
