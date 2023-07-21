@@ -66,3 +66,7 @@ section {
 div {
     display: block;
 }
+
+section:nth-of-type(even) {
+    background-color: var(--clr-surface);
+}

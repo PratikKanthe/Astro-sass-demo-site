@@ -2,11 +2,18 @@
     .grey{
         color: var(--clr-neutral);
     }
+
+    .article-item__title{
+        color: var(--clr-neutral-95);
+        font-weight: 600;
+        &:hover{
+            color: var(--clr-secondary);
+        }
+    }
     &__list{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-        
+        gap: 0;
     }
 
 
@@ -56,4 +63,16 @@
     }
 
 
+}
+
+@supports (-webkit-line-clamp: 3)
+{
+    .article-item__title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
 }

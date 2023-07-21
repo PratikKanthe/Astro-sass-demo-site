@@ -89,9 +89,9 @@
             gap: 0.5rem;
     
         
-            @media only screen and (min-width: 359.98px){
+            @media only screen and (max-width: 359.98px){
                 .top__bar__img-logo {
-                    width: 320px;
+                    width: 200px;
                     height: auto;
                     padding: 0.5rem 0;
                 }
