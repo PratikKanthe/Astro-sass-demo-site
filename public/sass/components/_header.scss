@@ -1,9 +1,9 @@
     
     header{
-
+        
         background:url(/public/images/topbar-background.jpg) no-repeat;
 
-        @media only screen and (min-width:302px){
+        @media only screen and (max-width:768px){
             background: var(--clr-primary-2);
         }
         
