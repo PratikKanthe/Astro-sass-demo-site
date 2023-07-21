@@ -51,9 +51,9 @@
         }
         .top-icon:hover{
             padding: 0.5rem;
-            background-color: white;
+            background-color: var(--clr-secondary);
             border-radius: 60%;
-            border: white;
+            border: var(--clr-secondary);
             transition: .1s;
         }
     
