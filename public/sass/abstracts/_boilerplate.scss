@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,400&display=swap');
+
 *,
 *::before,
 *::after{
@@ -14,7 +16,7 @@ html{
 body{
     background-color: var(--clr-body);
     color: var(--clr-on-body);
-    font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+    font-family:  system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
     font-size: var(--font-size);
 }
 
@@ -69,4 +71,8 @@ div {
 
 section:nth-of-type(even) {
     background-color: var(--clr-surface);
+}
+
+.bg{
+    background:var(--clr-primary-2) url(/public/images/top-bg.jpg) no-repeat;
 }

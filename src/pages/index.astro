@@ -11,19 +11,28 @@ import Table from '../layouts/Tables.astro'
 import CardSlider from '../layouts/CardSlider.astro'
 import FeaturedForum from '../layouts/FeaturedForum.astro'
 import Navbar from '../components/Navbar.astro';
+import Topbar from '../components/Topbar.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<script src="https://kit.fontawesome.com/5cbc03ee11.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<Header title={SITE_TITLE} />
-		<Navbar />
+		<div class="bg">
+			<Header title={SITE_TITLE} />
+			<Navbar />
+		</div>
+		<Topbar />
 		<main>
 			<Featured />
 			<AddBaner />
+			<div class="container">
+				<h1>India Forums</h1>
+				<p>Popular Indian Discussion Platform</p>
+			</div>
 			<Article />
 			<Forum />
 			<Table />

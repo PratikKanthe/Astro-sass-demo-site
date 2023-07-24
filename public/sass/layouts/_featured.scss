@@ -1,5 +1,9 @@
 
 .featured{
+    @media (min-width: 302px){
+        margin-top: 2.2rem;
+    }
+    margin-bottom: 2rem;
         .grey{
             color: var(--clr-neutral);
         }
@@ -58,6 +62,68 @@
            
             
         }
+
+        @media only screen and (min-width:768px){
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1rem;
+            .article-item:nth-child(1){
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+            .featured .article-item img {
+                height: 100%;
+                aspect-ratio: 16/9;
+            }
+            .article-item img {
+                object-fit: cover;
+                width: 100%;
+            }
+            .grey{
+                color: var(--clr-neutral);
+            }
+    
+            .breaking{
+                content: "BREAKING";
+                display: inline-block;
+                background-color: var(--clr-secondary);
+                padding: 0.25rem 0.5rem;
+                border-radius: 30px;
+                margin-right: 0.5rem;
+                font-size: 9px;
+                color: var(--clr-on-secondary);
+            }
+            .exclusive{
+                content: "EXCLUSIVE";
+                display: inline-block;
+                background-color: var(--clr-secondary-2);
+                color: var(--clr-on-secondary-2);
+                padding: 0.25rem 0.5rem;
+                border-radius: 30px;
+                margin-right: 0.5rem;
+                font-size: 9px;
+            }
+            .article-item__title{
+                color: var(--clr-neutral-95);
+                font-weight: 600;
+                &:hover{
+                    color: var(--clr-secondary);
+                }
+            }
+            
+            @supports (-webkit-line-clamp: 3){
+                .article-item__title {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: initial;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }}
+            
+        }
+        
+
         @media only screen and (min-width: 576px){
             .article-list {
                 display: grid;
@@ -101,7 +167,7 @@
     .featured .article-item__content {
         // position: absolute;
         // bottom: 0;
-        padding: 2rem 1rem 0.5rem;
+        padding: 1rem 1rem 0.5rem;
         background-image: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.8));
     }
     

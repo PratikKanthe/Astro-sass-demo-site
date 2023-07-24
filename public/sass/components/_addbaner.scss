@@ -1,8 +1,12 @@
 
 
 section{
+    margin-bottom: 1rem;
+    .banner{
+        margin-top: 1rem;
+      
+    }
         .ad-banner{
-            margin-top: 2rem;
             margin-bottom: 2rem;
             display: flex;
             justify-content: center;
@@ -13,4 +17,8 @@ section{
             }
         }
     
+}
+
+.platform{
+    background-color: #fff;
 }
