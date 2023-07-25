@@ -78,3 +78,48 @@ office.addEventListener("click", () => {
     console.log("clicked");
 });
 
+
+
+function slide(direction) {
+    var change = document.getElementById('js-channels');
+  
+    let scrollCompleted = 0;
+    var slideVar = setInterval(function () {
+      if (direction == 'left') {
+        change.scrollLeft -= 280;
+      } else {
+        change.scrollLeft += 280;
+      }
+      scrollCompleted += 280;
+      if (scrollCompleted >= 100) {
+        window.clearInterval(slideVar);
+      }
+    }, 50);
+  }
+
+
+
+//   const themeToggle = document.getElementById("themeToggle");
+//   const htmlElement = document.documentElement;
+  
+//   // Check if user has a theme preference saved in local storage
+//   const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+//   const userPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+  
+//   // Set the theme based on user's preference or default to light mode
+//   if (userPrefersDark && localStorage.getItem("theme") !== "light") {
+//       htmlElement.classList.add("dark-mode");
+//   } else if (userPrefersLight && localStorage.getItem("theme") === "dark") {
+//       htmlElement.classList.remove("dark-mode");
+//   }
+  
+//   // Toggle theme when the button is clicked
+//   themeToggle.addEventListener("click", () => {
+//       htmlElement.classList.toggle("dark-mode");
+//       if (htmlElement.classList.contains("dark-mode")) {
+//           localStorage.setItem("theme", "dark");
+//       } else {
+//           localStorage.setItem("theme", "light");
+//       }
+//   });
+  

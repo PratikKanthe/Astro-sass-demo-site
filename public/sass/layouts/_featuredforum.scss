@@ -1,12 +1,10 @@
-
-
-.featured-forum{
+.featured-forum {
+  margin-bottom: 2rem;
+  &__list {
     margin-bottom: 2rem;
-    &__list {
-        margin-bottom: 2rem;
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
-        gap: 1rem;
-        padding-top: 1rem;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    padding-top: 1rem;
+  }
 }
