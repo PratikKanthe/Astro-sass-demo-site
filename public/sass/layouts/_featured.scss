@@ -42,6 +42,10 @@
   }
 }
 @media only screen and (min-width: 992px) {
+  .featured {
+    margin-top: 0;
+  }
+
   .featured .article-list {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
