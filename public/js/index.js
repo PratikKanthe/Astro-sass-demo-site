@@ -104,6 +104,8 @@ function slide(direction) {
 
 
 
+  //dark mode functions
+
 //   const themeToggle = document.getElementById("themeToggle");
 //   const htmlElement = document.documentElement;
   
@@ -130,6 +132,8 @@ function slide(direction) {
   
 
 
+
+//tab
 const categoryTabLinks = document.querySelectorAll(".js-category-tab-link");
 
 if (categoryTabLinks) {
