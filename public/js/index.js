@@ -123,3 +123,53 @@ function slide(direction) {
 //       }
 //   });
   
+
+async function getCategoryJson(element, event) {
+    // alert('hello world');
+  
+  
+    const articleList = document.getElementById('js-article-list');
+    articleList.innerHTML = "<div class='loader'></div>";
+  
+    var catId = element.getAttribute("data-url");
+    const data = await Utils.getJson("/api/_" + catId + ".json");
+  
+    if (articleList && data) {
+  
+      console.log(catId);
+      let template = {
+        "<>": "a", "href": "${link}", "class": function () {
+          switch (this.flag) {
+            case 1:
+              return ("article-item article-item--exclusive");
+              break;
+            case 2:
+              return ("article-item article-item--breaking");
+              break;
+            default:
+              return ("article-item");
+              break;
+  
+          }
+        }, "html": [
+          { "<>": "img", "src": "${thumbnail}", "class": "article-item__image", "width": "320", "height": "180", "html": "" },
+          {
+            "<>": "div", "class": "article-item__content", "html": [
+              { "<>": "p", "class": "article-item__title", "html": "${title}" },
+              {
+                "<>": "p", "class": "pretty-time", "data-utc": "2022-03-10T04:56:00Z", "html": function (obj) {
+                  return (Utils.getRelativeTime(new Date(obj.time)));
+                }
+              }
+              //{ "<>": "p", "class": "pretty-time", "data-utc": "2022-03-10T04:56:00Z", "html": "${time}" }
+            ]
+          }
+        ]
+      };
+      let html = json2html.render(data.articles, template)
+  
+      articleList.innerHTML = html;
+  
+    }
+  
+  }

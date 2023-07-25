@@ -1105,11 +1105,12 @@ footer .footer__disclaimer {
       rgba(0, 0, 0, 0.8)
     );
   }
-  .featured .article-item__content:hover .pretty-time {
-    display: block;
-  }
+
   .featured .article-item .pretty-time {
     display: none;
+  }
+  .featured .article-item__content:hover .pretty-time {
+    display: block;
   }
   .featured .article-item__title {
     color: #fff;
