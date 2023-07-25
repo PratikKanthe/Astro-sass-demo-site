@@ -67,16 +67,10 @@ button.slider-btn.extra {
 .slider-btn{
     margin-top: 1rem;
     margin-bottom: 2rem;
-    background-color: var(--clr-secondary);
-    color: var(--clr-on-secondary);
-    padding: 0.5rem 1.5rem;
     text-align: center;
-    border: 0;
-    border-radius: 1rem;
-    font-size: .875rem;
+    font-size: 1rem;
     // line-height: 2.5;
     &:hover{
-        background-color: var(--clr-primary-2);
         color: var(--clr-secondary);
     }
 }
@@ -88,3 +82,4 @@ button.slider-btn.extra {
         max-width: 20vw;
     }
 }
+

@@ -66,7 +66,34 @@
     }
 
 
+
 }
+
+.btn-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-more{
+    margin: 1rem 0;
+    background-color: var(--clr-secondary);
+    color: var(--clr-on-secondary);
+    padding: 0.5rem 1rem;
+    
+    text-align: center;
+    border: 0;
+    border-radius: 20px;
+    font-size: .875rem;
+    line-height: 1.5;
+
+    &:hover{
+        background-color: var(--clr-primary-2);
+        color: var(--clr-primary);
+    }
+    
+}
+
 
 @supports (-webkit-line-clamp: 3)
 {

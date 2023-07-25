@@ -7,6 +7,7 @@
     // align-items: center;
     // justify-content: center;
     
+   
     
     &__items{
         display: flex;
@@ -15,6 +16,7 @@
         justify-content: space-between;
         // gap: 1rem;
         // padding: 1rem;
+
         .nav__submenu{
             display: none;
             position: absolute;
@@ -22,9 +24,10 @@
             right: 0;
             background-color: var(--clr-primary-2);
             z-index: 100;
-            &:hover{
-                display: block;
-            }
+        }
+        .nav__submenu:hover{
+            display: block;
+            top: 100%;
         }
         .nav__submenu.active{
             display: block;
@@ -54,6 +57,7 @@
             display: block;
             top: 100%;
         }
+        
         li:hover{
             background-color: var(--clr-secondary);
             color: #fff;
