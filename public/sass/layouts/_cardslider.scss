@@ -44,3 +44,12 @@
 .show-list span {
   font-size: 0.75rem;
 }
+
+.flex-left-right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scroll-btn {
+  padding: 0.5rem 0.5rem;
+}
