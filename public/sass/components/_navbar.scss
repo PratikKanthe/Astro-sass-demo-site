@@ -1,123 +1,76 @@
-.nav{
-    margin-top: 0;
-    // margin-bottom: 1rem;
+.nav__menu {
+  display: flex;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 767.98px) {
+  .nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: var(--clr-mono-5);
+    color: var(--clr-mono-90);
+    z-index: 100;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--clr-mono-15);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+  }
+  .nav__menu {
+    flex-direction: column;
+  }
+  .nav__menu > li {
+    border-bottom: 1px solid var(--clr-mono-15);
+    padding: 0.5rem;
+  }
+  .nav__menu > li:last-child {
+    border-bottom: 0;
+  }
+  .nav__submenu {
+    margin: 0.5rem 1.5rem;
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .nav {
     background-color: var(--clr-primary-2);
     position: relative;
     display: block;
-    // align-items: center;
-    // justify-content: center;
-    
-   
-    
-    &__items{
-        display: flex;
-        flex-direction: row;
-        // align-items: center;
-        justify-content: space-between;
-        // gap: 1rem;
-        // padding: 1rem;
-
-        .nav__submenu{
-            display: none;
-            position: absolute;
-            left: 0;
-            right: 0;
-            background-color: var(--clr-primary-2);
-            z-index: 100;
-        }
-        .nav__submenu:hover{
-            display: block;
-            top: 100%;
-        }
-        .nav__submenu.active{
-            display: block;
-            top: 100%;
-        }
-        .nav__submenu1{
-            display: none;
-            position: absolute;
-            left: 0;
-            right: 0;
-            background-color: var(--clr-primary-2);
-            z-index: 100;
-        }
-        .nav__submenu1.active{
-            display: block;
-            top: 100%;
-        }
-        .nav__submenu2{
-            display: none;
-            position: absolute;
-            left: 0;
-            right: 0;
-            background-color: var(--clr-primary-2);
-            z-index: 100;
-        }
-        .nav__submenu2.active{
-            display: block;
-            top: 100%;
-        }
-        
-        li:hover{
-            background-color: var(--clr-secondary);
-            color: #fff;
-        }
-        li:first-child {
-            border-left: 1px solid #661256;
-        }
-        li{
-            border-right: 1px solid #661256;
-            flex: 1;
-            text-align: center;
-            position: relative;
-            color: #fff;
-            padding: 1rem;
-        }
-        li>a{
-            text-transform: uppercase;
-            color: var(--clr-body);
-        }
-    }
-
-
-    @media (max-width: 768px){
-        
-        li:first-child {
-            border-left: none;
-        }
-
-        .nav__items{
-            position: fixed;
-            right: 100%;
-            top: 50px;
-            gap: 0;
-            flex-direction: column;
-            background-color: var(--clr-neutral-5);
-            color: black;
-            width: 100%;
-            text-align: center;
-            transition: 0.3s;
-        }
-        .nav-menu{
-            margin: 16px 0;
-            border: none;
-            border-bottom: 1px solid var(--clr-neutral-15);
-            
-        }
-        li>a{
-            font-size: var(--font-size-sm);
-            font-weight: 600;
-        }
-        li:hover{
-            background-color: #fff;
-        }
-        .nav__items.active{
-            right: 0;
-        }
-
-        #nav-link{
-            color: black;
-        }
-    }
-
+  }
+  .nav__menu {
+    justify-content: space-around;
+  }
+  .nav__menu > li:first-child {
+    border-left: 1px solid var(--clr-primary);
+  }
+  .nav__menu > li {
+    border-right: 1px solid var(--clr-primary);
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #ffffffb3;
+    padding: 1rem 0.5rem;
+    display: block;
+    font-size: var(--font-size-xs);
+    line-height: 1;
+  }
+  .nav a:focus,
+  .nav a:hover {
+    background-color: var(--clr-secondary);
+    color: #fff;
+  }
+  .nav__submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--clr-primary-2);
+    z-index: 100;
+  }
+  .nav__dropdown:hover .nav__submenu {
+    display: block;
+  }
 }
