@@ -1,8 +1,10 @@
+
+//hamburger menu
 const hamburger = document.getElementById("hamburger");
 
 const navMenu = document.getElementById("nav-items");
 
-
+//this is for icon cards
 const activeMenu = document.getElementById("active-menu");
 const movie = document.getElementById("movie-menu");
 const tv = document.getElementById("tv-menu");
@@ -19,6 +21,9 @@ const profileIcon = document.getElementById("profile-icon");
 const notification = document.getElementById("notification");
 const office = document.getElementById("office");
 const profileWrap = document.getElementById("wrap-profile");
+
+
+//code
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
@@ -78,7 +83,7 @@ office.addEventListener("click", () => {
     console.log("clicked");
 });
 
-
+//slide function
 
 function slide(direction) {
     var change = document.getElementById('js-channels');
@@ -124,52 +129,68 @@ function slide(direction) {
 //   });
   
 
+
+const categoryTabLinks = document.querySelectorAll(".js-category-tab-link");
+
+if (categoryTabLinks) {
+  categoryTabLinks.forEach(btn => btn.addEventListener("click", function (e) {
+
+    document.querySelector(".tab__item--active").classList.remove("tab__item--active");
+    this.classList.add("tab__item--active");
+
+    getCategoryJson(this, e)
+
+    e.preventDefault();
+  }))
+
+}
+
+
 async function getCategoryJson(element, event) {
-    // alert('hello world');
-  
-  
-    const articleList = document.getElementById('js-article-list');
-    articleList.innerHTML = "<div class='loader'></div>";
-  
-    var catId = element.getAttribute("data-url");
-    const data = await Utils.getJson("/api/_" + catId + ".json");
-  
-    if (articleList && data) {
-  
-      console.log(catId);
-      let template = {
-        "<>": "a", "href": "${link}", "class": function () {
-          switch (this.flag) {
-            case 1:
-              return ("article-item article-item--exclusive");
-              break;
-            case 2:
-              return ("article-item article-item--breaking");
-              break;
-            default:
-              return ("article-item");
-              break;
-  
-          }
-        }, "html": [
-          { "<>": "img", "src": "${thumbnail}", "class": "article-item__image", "width": "320", "height": "180", "html": "" },
-          {
-            "<>": "div", "class": "article-item__content", "html": [
-              { "<>": "p", "class": "article-item__title", "html": "${title}" },
-              {
-                "<>": "p", "class": "pretty-time", "data-utc": "2022-03-10T04:56:00Z", "html": function (obj) {
-                  return (Utils.getRelativeTime(new Date(obj.time)));
-                }
+
+
+  const articleList = document.getElementById('js-article-list');
+  articleList.innerHTML = "<div class='loader'></div>";
+
+  var catId = element.getAttribute("data-url");
+  const data = await Utils.getJson("/api/_" + catId + ".json");
+
+  if (articleList && data) {
+
+    console.log(catId);
+    let template = {
+      "<>": "a", "href": "${link}", "class": function () {
+        switch (this.flag) {
+          case 1:
+            return ("article-item article-item--exclusive");
+            break;
+          case 2:
+            return ("article-item article-item--breaking");
+            break;
+          default:
+            return ("article-item");
+            break;
+
+        }
+      }, "html": [
+        { "<>": "img", "src": "${thumbnail}", "class": "article-item__image", "width": "320", "height": "180", "html": "" },
+        {
+          "<>": "div", "class": "article-item__content", "html": [
+            { "<>": "p", "class": "article-item__title", "html": "${title}" },
+            {
+              "<>": "p", "class": "pretty-time", "data-utc": "2022-03-10T04:56:00Z", "html": function (obj) {
+                return (Utils.getRelativeTime(new Date(obj.time)));
               }
-              //{ "<>": "p", "class": "pretty-time", "data-utc": "2022-03-10T04:56:00Z", "html": "${time}" }
-            ]
-          }
-        ]
-      };
-      let html = json2html.render(data.articles, template)
-  
-      articleList.innerHTML = html;
-  
-    }
-  
+            }
+          ]
+        }
+      ]
+    };
+    let html = json2html.render(data.articles, template)
+
+    articleList.innerHTML = html;
+
   }
+
+}
+
