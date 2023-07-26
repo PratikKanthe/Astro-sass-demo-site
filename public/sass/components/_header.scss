@@ -13,10 +13,11 @@ header {
     right: 2rem;
     display: block;
     left: 15%;
+    top: 5.5rem;
   }
   @media (min-width: 992px) {
     .wrap-search.active {
-      top: 14%;
+      top: 10%;
     }
   }
   #search-label.active {
@@ -155,6 +156,30 @@ header {
     .hamburger {
       display: none;
     }
+    .top__bar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 302px){
+    .top__bar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 768px){
+    .top__bar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
   }
 
   @media (min-width: 768px) {
@@ -179,11 +204,11 @@ header {
   }
 
   .search {
-    margin-right: 1rem;
+    // margin-right: 1rem;
   }
   .top-icons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     gap: 0.05rem;
     padding: 0.25rem -0.5rem;
@@ -226,7 +251,7 @@ header {
     }
     .top-bar-search__query {
       flex: 1;
-      width: 25vw;
+      width: 30vw;
     }
   }
 
@@ -243,13 +268,14 @@ header {
         padding: 0.5rem 0;
       }
     }
+    
     &__menu-icon {
       width: 28px;
       height: 28px;
       fill: #b57788;
     }
     .wrap-top-icon {
-      margin-right: 2rem;
+      // margin-right: 2rem;
     }
   }
 }

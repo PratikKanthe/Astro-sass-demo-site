@@ -21,8 +21,10 @@
       position: absolute;
       left: 0;
       right: 0;
+      top: 3.4rem;
       background-color: var(--clr-primary-2);
       z-index: 100;
+      border: none;
     }
     .nav__dropdown:hover .nav__submenu {
       display: block;
@@ -36,8 +38,10 @@
       position: absolute;
       left: 0;
       right: 0;
+      top: 3.4rem;
       background-color: var(--clr-primary-2);
       z-index: 100;
+      border: none;
     }
     .nav__submenu1.active {
       display: block;
@@ -48,8 +52,10 @@
       position: absolute;
       left: 0;
       right: 0;
+      top: 3.4rem;
       background-color: var(--clr-primary-2);
       z-index: 100;
+      border: none;
     }
     .nav__submenu2.active {
       display: block;
