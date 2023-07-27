@@ -125,7 +125,6 @@ class Utils {
 
 //This is done to avoid conflicts with other scripts
 const init = async () => {
-  console.log('Hello from app.js');
 
   //This sets the Navigation Toggle Menu for Mobile
   setNavigationToggle();

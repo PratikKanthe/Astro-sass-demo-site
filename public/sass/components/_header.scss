@@ -69,7 +69,7 @@ header {
 
       .select-profile {
         width: 40vw;
-        margin: 0.5rem;
+        margin-bottom: 0.5rem;
         padding: 0.5rem 0.5rem;
       }
       @media (min-width: 902px) {
@@ -101,7 +101,7 @@ header {
 
     .profile-btn {
       margin-top: 1rem;
-      padding: 0 0.5rem;
+      padding: 0.5rem 0.5rem;
       width: 45vw;
       text-align: center;
       display: flex;
@@ -203,9 +203,6 @@ header {
     }
   }
 
-  .search {
-    // margin-right: 1rem;
-  }
   .top-icons {
     display: flex;
     justify-content: space-between;
@@ -273,9 +270,6 @@ header {
       width: 28px;
       height: 28px;
       fill: #b57788;
-    }
-    .wrap-top-icon {
-      // margin-right: 2rem;
     }
   }
 }

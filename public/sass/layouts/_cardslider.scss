@@ -14,7 +14,7 @@
   grid-auto-flow: column;
   grid-auto-columns: minmax(270px, 1fr);
   grid-template-rows: min-content;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overscroll-behavior-inline: contain;
   scroll-snap-type: x proximity;
   padding: 0.5rem;

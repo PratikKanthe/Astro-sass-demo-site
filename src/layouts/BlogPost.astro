@@ -1,21 +1,22 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import Article from './Article.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+const {frontmatter} = Astro.props;
+const data = {frontmatter}
+const { title, description, image, date, preview}= data.frontmatter;
 
 
+// type Props = CollectionEntry<'blog'>['data'];
 
-
-type Props = CollectionEntry<'blog'>['data'];
-
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead  />
 		<style>
 			.title {
 				font-size: 2em;
@@ -34,20 +35,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<body>
 		<Header />
 		<main>
-			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="title">{title}</h1>
-				<FormattedDate date={pubDate} />
-				{
-					updatedDate && (
-						<div class="last-updated-on">
-							Last updated on <FormattedDate date={updatedDate} />
-						</div>
-					)
-				}
-				<hr />
-				<slot />
-			</article>
+			<h1>{frontmatter.title}</h1>
+			<Article />
 		</main>
 		<Footer />
 	</body>
