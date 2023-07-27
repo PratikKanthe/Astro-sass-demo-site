@@ -2,8 +2,8 @@
 layout: ../../layouts/BlogPost.astro
 title: article1
 description: Arjun Kapoor and John Abraham's hindi remake of Ayyappanum Koshiyam put on hold
-date: 2023-07-26T10:41:43.352Z
-image:
+pubDate: 2023-07-26T10:41:43.352Z
+heroImage:
   src: /images/arjun.jpg
   alt: news article
 draft: false
