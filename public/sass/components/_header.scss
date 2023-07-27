@@ -156,7 +156,7 @@ header {
     .hamburger {
       display: none;
     }
-    .top__bar{
+    .top__bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -164,8 +164,8 @@ header {
     }
   }
 
-  @media (min-width: 302px){
-    .top__bar{
+  @media (min-width: 302px) {
+    .top__bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -173,8 +173,8 @@ header {
     }
   }
 
-  @media (min-width: 768px){
-    .top__bar{
+  @media (min-width: 768px) {
+    .top__bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -251,7 +251,7 @@ header {
     }
     .top-bar-search__query {
       flex: 1;
-      width: 30vw;
+      width: 20vw;
     }
   }
 
@@ -268,7 +268,7 @@ header {
         padding: 0.5rem 0;
       }
     }
-    
+
     &__menu-icon {
       width: 28px;
       height: 28px;
