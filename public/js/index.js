@@ -23,7 +23,7 @@ const office = document.getElementById("office");
 const profileWrap = document.getElementById("wrap-profile");
 
 
-//code
+//function code
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
