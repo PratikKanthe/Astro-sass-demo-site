@@ -62,25 +62,21 @@ navMenu.querySelectorAll("dropdown").forEach(n => n.addEventListener("click", ()
 search.addEventListener("click", () => {
     search.classList.toggle("active");
     searchBar.classList.toggle("active");
-    console.log("clicked");
 });
 
 profileIcon.addEventListener("click", () => {
     profileIcon.classList.toggle("active");
     profileWrap.classList.toggle("active");
-    console.log("clicked");
 });
 
 notification.addEventListener("click", () => {
     notification.classList.toggle("active");
     profileWrap.classList.toggle("active");
-    console.log("clicked");
 });
 
 office.addEventListener("click", () => {
     office.classList.toggle("active");
     profileWrap.classList.toggle("active");
-    console.log("clicked");
 });
 
 //slide function
