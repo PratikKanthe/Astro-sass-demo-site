@@ -243,6 +243,8 @@ const init = async () => {
   }
 
 
+  
+
   async function getNotificationCount() {
 
     const inboxCount = document.getElementById("js-inbox-count");

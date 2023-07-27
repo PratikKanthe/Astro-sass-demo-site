@@ -31,3 +31,40 @@ $blue: blue;
     --clr-neutral-95: #0d0d0d;
     --clr-black: #000;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --clr-mono-0: #000;
+      --clr-mono-5: #0d0d0d;
+      --clr-mono-10: #1a1a1a;
+      --clr-mono-15: #262626;
+      --clr-mono-20: #333333;
+      --clr-mono-30: #4d4d4d;
+      --clr-mono-40: #666666;
+      --clr-mono-50: gray;
+      --clr-mono-60: #999999;
+      --clr-mono-70: #b3b3b3;
+      --clr-mono-75: #bfbfbf;
+      --clr-mono-80: #cccccc;
+      --clr-mono-85: #d9d9d9;
+      --clr-mono-90: #e6e6e6;
+      --clr-mono-95: #f2f2f2;
+      --clr-mono-100: #fff;
+      --clr-primary: #310a16;
+      --clr-on-primary: #b57788;
+      --clr-primary-2: #3a0a31;
+      --clr-on-primary-2: #b57788;
+      --clr-secondary: #e6073d;
+      --clr-on-secondary: #fff;
+      --clr-secondary-2: #ffd232;
+      --clr-on-secondary-2: #000;
+      --clr-body: var(--clr-mono-10);
+      --clr-on-body: var(--clr-mono-90);
+      --clr-surface: var(--clr-mono-20);
+      --clr-on-surface: var(--clr-mono-95);
+      --clr-gray: gray;
+    }
+    img {
+      filter: brightness(0.8) contrast(1.2);
+    }
+  }

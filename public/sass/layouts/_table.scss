@@ -2,7 +2,7 @@
 	margin-top: 3rem;
 	padding: 1rem;
 	margin-bottom: 3rem;
-	color: black;
+	color: var(--clr-on-body);
 	font-size: 1rem;
 }
 
@@ -19,7 +19,7 @@ table{
 	}  
 }  
 th{
-	background-color: #e6e6e6;
+	background-color: var(--clr-mono-10);
 }
 th,td{  
 border: 0.5px solid grey;   
